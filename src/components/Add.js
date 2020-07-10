@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { ADD_TODO, SAVE_EDIT_TODO, CLEAR_EDIT } from '../reducers/todoreducer'
-import { current } from '@reduxjs/toolkit'
+
 
 
 export const Add = () => {
@@ -29,7 +29,7 @@ export const Add = () => {
     const HandleSubmit = (e) => {
         e.preventDefault();
 
-        if (form.task.length === 0) {
+        if (form.task === undefined || form.task === "") {
             alert('Preencha a tarefa')
         } else {
             if (currentTodo.id !== undefined) {
