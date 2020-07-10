@@ -44,9 +44,9 @@ export const Add = () => {
     return (
         <>
             <hr />
-            <input type='text' placeholder="Adicionar tarefa" name='task' id='task' onChange={HandleChange} value={form.task || ''} required />
-            <br />
-            <button type='button' onClick={HandleSubmit}>Adicionar</button>
+            <input type='text' placeholder="Adicionar tarefa" name='task' className="form-control" id='task' onChange={HandleChange} value={form.task || ''} required />
+            <br/>
+            <button type='button' onClick={HandleSubmit} className='btn btn-success'>Adicionar</button>
 
         </>
     )

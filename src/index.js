@@ -5,10 +5,13 @@ import { Provider } from 'react-redux';
 import store from './store/index'
 import {Add} from './components/Add'
 import { Todolist } from './components/Todolist';
+import 'bootstrap/dist/css/bootstrap.css'
 ReactDOM.render(
   <Provider store={store}>
+    <div className="container">
     <Todolist/>
     <Add/>
+    </div>
   </Provider>,
   document.getElementById('root')
 );

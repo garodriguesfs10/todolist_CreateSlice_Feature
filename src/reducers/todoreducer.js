@@ -12,7 +12,9 @@ const todoSlicer = createSlice({
     initialState: INITIAL_STATE,
     reducers:{
         ADD_TODO: (state,action) =>{
+            console.log('Action Payload ADD_TODO: '+ JSON.stringify(action.payload))
             const {task} = action.payload;
+            console.log('TASK: '+task)
             const id = uuidv4() 
             state.todos.push({task:task,id:id})
         },
